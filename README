@@ -1,0 +1,138 @@
+
+Exercie 1 : 
+
+Ligne 1 : - : int = 4611686018427387903
+L'entier maximum que caml est capable de repondre/reconnaitre est 4611686018427387903
+
+Ligne 2 : - : int = -4611686018427387904
+lorsqu'on ajoute 1 a la valeur maximum, la valeur renvoyee est -(max_int + 1)  
+
+Ligne 3 : - : int = -4611686018427387904
+La valeur mimimal que caml est capable de reconnaitre est -4611686018427387904, ou (-max_int -1)
+
+Ligne 4 : - : int = 0
+Doubler la valeur minimale donne 0, on peut donc penser que caml ne parvient pas a doubler la valeur qui est deja la plus petite et renvoie donc 0.
+
+Ligne 5 : - : int = -2
+Caml ne parvient surement pas non plus a doubler la valeur max et renvoie 2
+
+Ligne 6 : - : bool = true
+Ligne 7 : - : bool = true
+Ligne 8 : - : bool = false
+Conclusion pour ligne 6/7/8 : Lorsque la valeur ajoutee est 1 ou 15, la reponse envoyee est vraie tandis que si l'on prend comme valeur 16 ou 18 la reponse renvoyee est faux. Ainsi nous pouvons penser qu'il existe un lien entre l'addition et le fait que la valeur ajoutee soit paire ou non.
+
+
+Exercice 2 : 
+
+Ligne 1 : val range : int -> int -> int = <fun>
+Le type de la fonction range est un entier
+
+Ligne 2 : val rangeBis : int * int -> int = <fun>
+Le type de la fontion rangeBis est un entier
+
+Ligne 3 : range is now traced.
+Desormais, tous les appels a la fontion range seront traces
+
+Ligne 4 : rangeBis is now traced.
+Desormais, tous les appels a la fontion rangeBis seront traces
+
+Ligne 5 : range <-- 15
+range --> <fun>
+range* <-- 27
+range* --> 21
+- : int = 21
+Ocaml detaille l'expression avec les valeurs de depart et celle d'arrivee
+
+Ligne 6 : rangeBis <-- (15, 27)
+rangeBis --> 21
+- : int = 21
+Lorsque c'est une couple, ocaml ne fonctionne pas de la meme maniere et ne detaille pas les valeurs d'entree
+
+Ligne 7 : range is no longer traced
+La fonction 7 n'est plus tracee, les etapes ne seront donc plus detaillees
+
+Ligne 8 : - : int = 8
+On remarque bien que Caml ne nous renvoie que lq valeur d'arrivee, le resultat. 
+
+Ligne 9 : val add_curry : int -> int -> int -> int -> int -> int = <fun>
+Caml nous renvoie le type de la fonction add_curry
+
+Ligne 10 : val add : int * int * int * int * int -> int = <fun>
+Caml nous renvoie le type de la fonction add
+
+ligne 11 : add_curry is now traced.
+Desormais, tous les appels a la fontion add_curry seront traces
+
+ligne 12 : add is now traced.
+Desormais, tous les appels a la fontion add seront traces
+
+ligne 13 : add <-- (1, 2, 3, 4, 5)
+add --> 15
+- : int = 15
+Caml nous renvoie le detail des valeurs qu'on applique a la fonction et donne le resultat final
+
+Ligne 14 : add_curry <-- 1
+add_curry --> <fun>
+add_curry* <-- 2
+add_curry* --> <fun>
+add_curry** <-- 3
+add_curry** --> <fun>
+add_curry*** <-- 4
+add_curry*** --> <fun>
+add_curry**** <-- 5
+add_curry**** --> 15
+- : int = 15
+Caml nous renvoie le detail des valeurs qu'on applique a la fonction avec les details des calculs et donne resultat final
+
+Ligne 15 : val a : int = 1
+Donne le resultat de la fonction pour a = 1 et precise son type
+
+Ligne 16 : val f : int -> int = <fun>
+Donne le type des arguments et precise que c'est une fonction
+
+Ligne 17 : - : int = 5
+Donne le resultat et precise son type
+
+Ligne 18 : val a : int = 5
+Donne la valeur de la definition et precise son type 
+
+Ligne 19 : - : int = 5
+Caml a execute la fonction avec x = 4 comme demande et a donne le resultat ainsi que ton type (x + 1 = 5)
+
+Ligne 20 : val succ : int -> int = <fun>
+
+Ligne 21 : succ is now traced.
+Desormais, tous les appels a la fontion succ seront traces
+ 
+Ligne 22 : val square : int -> int = <fun>
+
+Ligne 23 : square is now traced.
+
+Ligne 24 : val square_of_succ : int -> int = <fun>
+
+Ligne 25 : square_of_succ is now traced.
+
+Ligne 26 : square_of_succ <-- 2
+succ <-- 2
+succ --> 1
+square <-- 1
+square --> 1
+square_of_succ --> 1
+- : int = 1
+Donne les details des calculs ainsi que la valeur finale 
+
+Ligne 27 : val succ : int -> int = <fun>
+
+Ligne 28 : square_of_succ <-- 2
+succ <-- 2
+succ --> 1
+square <-- 1
+square --> 1
+square_of_succ --> 1
+- : int = 1
+Donne les details des calculs ainsi que la valeur finale 
+
+ligne 29 : - : int = 3
+Donne la valeur final du calcul ainsi que son type
+
+
